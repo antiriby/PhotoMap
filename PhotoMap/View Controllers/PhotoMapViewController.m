@@ -87,8 +87,11 @@
 - (void)locationsViewController:(LocationsViewController *)controller didPickLocationWithLatitude:(NSNumber *)latitude longitude:(NSNumber *)longitude {
     
     //Create the coordinate using the latitutde and longitude parameters
-    CLLocationCoordinate2D coordinate = CLLocationCoordinate2DMake(latitude.floatValue, longitude.floatValue);
     
+    //CLLocationCoordinate2D coordinate = CLLocationCoordinate2DMake(latitude.floatValue, longitude.floatValue);
+    
+    CLLocationCoordinate2D coordinate = CLLocationCoordinate2DMake(40.720, -73.99);
+//    MKCoordinateRegion nyRegion = MKCoordinateRegionMake(CLLocationCoordinate2DMake(40.720, -73.99), MKCoordinateSpanMake(0.1, 0.1));
     //Create the map kit annotation and add it to the map
     MKPointAnnotation *annotation = [MKPointAnnotation new];
     annotation.coordinate = coordinate;
